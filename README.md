@@ -16,7 +16,6 @@ Addressing OCD requires a comprehensive approach, including professional mental 
 
 2. HTML(Frontend Development)
 
-
 3. CSS(Frontend Design)
 
 ## Proposed Solution: 
