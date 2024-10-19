@@ -10,14 +10,6 @@ In addition to mental health challenges, the stress caused by OCD can lead to ph
 
 Addressing OCD requires a comprehensive approach, including professional mental health support, therapy, and sometimes medication, yet societal stigma and lack of awareness often prevent individuals from accessing the care they need. Public education about OCD and the importance of seeking timely psychiatric help can play a key role in breaking down barriers and helping those affected reclaim control over their lives.
 
-## Languages Used:
-
-
-1.Javascript(Frontend and Backend)
-
-2.HTML(Frontend Development)
-
-3.CSS(Frontend Design)
 
 ## Proposed Solution: 
 
