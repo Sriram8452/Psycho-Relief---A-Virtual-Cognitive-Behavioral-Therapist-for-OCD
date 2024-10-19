@@ -13,7 +13,10 @@ Addressing OCD requires a comprehensive approach, including professional mental 
 ## Languages Used:
 
 1.Javascript(Frontend and Backend)
+
 2. HTML(Frontend Development)
+
+
 3. CSS(Frontend Design)
 
 ## Proposed Solution: 
