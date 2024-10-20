@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Psycho Relief - A Virtual Cognitive Behavioral Therapist for OCD</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    overflow: hidden;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1fr; /* 3 columns for buttons, 1 for images */
+    grid-template-rows: auto repeat(2, 1fr); /* Two rows for the buttons and image area */
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .image-container {
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Split the right rectangle into two rows */
+    gap: 10px;
+  }
+  .image-slot {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .button-container {
+    display: grid;
+    grid-template-rows: 2fr 1fr; /* 2 parts: image on top, text on bottom */
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: black;
+    max-height: 300px; /* Expanded max height for even larger buttons */
+    transition: transform 0.3s ease; /* Add a hover effect */
+  }
+  .button-container:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+  .button-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  .button-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+  .title {
+    grid-column: 1 / span 4;
+    text-align: center;
+    font-size: 26px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+</style>
+<script>
+  // Array of random images for both slots - using random image links from the internet
+  const images1 = [
+    '../a1.png',
+    'https://images.squarespace-cdn.com/content/v1/5cd4c6c5797f7461b0754831/1575063618804-L1PXS3MWA11IB3EJ94CL/It%27s+okay+to+rest.+%2814%29.png',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1WRDFIlKxwBTe0KfxK4tZKnz9hAZl_We_Iw&s'
+  ];
+  
+  const images2 = [
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0SM2tV3JE-9yI5slYd9bZqOqSBXfGqnb33g&s',
+    'https://d3srkhfokg8sj0.cloudfront.net/wp-content/uploads/1220_STD_OCD_quote.jpg',
+    'https://images.squarespace-cdn.com/content/v1/602fc54797144054a9d7f051/1689444155871-GXZL132NLXOODQL5UJZ8/6.png?format=500w'
+  ];
+
+  let index1 = 0;
+  let index2 = 0;
+
+  // Function to rotate the images in the right rectangular slots
+  function rotateImages() {
+    const imgSlot1 = document.getElementById('img-slot-1');
+    const imgSlot2 = document.getElementById('img-slot-2');
+
+    // Update the image sources
+    imgSlot1.src = images1[index1];
+    imgSlot2.src = images2[index2];
+
+    // Increment the index or reset if it reaches the end of the array
+    index1 = (index1 + 1) % images1.length;
+    index2 = (index2 + 1) % images2.length;
+
+    // Change the images every 3 seconds
+    setTimeout(rotateImages, 3000);
+  }
+
+  // Start rotating images when the page loads
+  window.onload = rotateImages;
+</script>
+</head>
+<body>
+<div class="container">
+  <div class="title">Psycho Relief - A Virtual Cognitive Behavioral Therapist for OCD</div>
+  
+  <!-- Buttons with static images -->
+  <a href="Contam.html" class="button-container">
+    <div class="button-image" style="background-image: url('../OCD.jpg');"></div>
+    <div class="button-text">Identify the Type of OCD</div>
+  </a>
+  
+  <a href="index1-Contamination.html" class="button-container">
+    <div class="button-image" style="background-image: url('../Contamination.jpg');"></div>
+    <div class="button-text">Contamination OCD</div>
+  </a>
+  
+  <a href="index1-Checking.html" class="button-container">
+    <div class="button-image" style="background-image: url('../Checking.jpg');"></div>
+    <div class="button-text">Checking OCD</div>
+  </a>
+  
+  <a href="index1-Symmetry.html" class="button-container">
+    <div class="button-image" style="background-image: url('../Symmetry.jpg');"></div>
+    <div class="button-text">Symmetry and Orderliness OCD</div>
+  </a>
+  
+  <a href="index1-Intrusive.html" class="button-container">
+    <div class="button-image" style="background-image: url('../Intrusive.jpg');"></div>
+    <div class="button-text">Intrusive Thoughts OCD</div>
+  </a>
+  
+  <a href="index1-Hoarding.html" class="button-container">
+    <div class="button-image" style="background-image: url('../Hoarding.jpg');"></div>
+    <div class="button-text">Hoarding OCD</div>
+  </a>
+  
+  <!-- Right column split into two image slots with dynamic images -->
+  <div class="image-container">
+    <div class="image-slot">
+      <img id="img-slot-1" src="https://via.placeholder.com/300x200?text=Image+1" alt="Image 1">
+    </div>
+    <div class="image-slot">
+      <img id="img-slot-2" src="https://via.placeholder.com/300x200?text=Image+4" alt="Image 2">
+    </div>
+  </div>
+</div>
+</body>
+</html>

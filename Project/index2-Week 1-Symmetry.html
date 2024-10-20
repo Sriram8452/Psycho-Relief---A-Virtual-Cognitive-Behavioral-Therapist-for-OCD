@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Exercise Plan</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes full viewport height */
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  .card-content {
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    flex-grow: 1;
+  }
+  .card-content h2 {
+    font-size: 28px;
+    margin: 0;
+  }
+  .card-content p {
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+  }
+  button {
+    width: 100%;
+    height: 60px;
+    border: none; /* Remove default border */
+    outline: none; /* Removes focus border */
+    font-size: 24px;
+    color: #fff; /* White text color for contrast */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    border-radius: 0 0 10px 10px; /* Rounded corners for bottom of card */
+  }
+  /* Individual background colors for each button */
+  .card:nth-child(1) button {
+    background-color: #ff6666; /* Red for Day 1 */
+  }
+  .card:nth-child(2) button {
+    background-color: #66b3ff; /* Light Blue for Day 2 */
+  }
+  .card:nth-child(3) button {
+    background-color: #99ff99; /* Light Green for Day 3 */
+  }
+  .card:nth-child(4) button {
+    background-color: #ffcc66; /* Orange for Day 4 */
+  }
+  .card:nth-child(5) button {
+    background-color: #ff99cc; /* Pink for Day 5 */
+  }
+  .card:nth-child(6) button {
+    background-color: #9966ff; /* Purple for Day 6 */
+  }
+  .card:nth-child(7) button {
+    background-color: #00cccc; /* Teal for Day 7 */
+  }
+  .card:nth-child(8) button {
+    background-color: #3333cc; /* Dark Blue for Video Content */
+  }
+  /* Hover effect */
+  button:hover {
+    background-color: #e2e2e2; /* Change background to light grey on hover */
+    color: #333; /* Change text color on hover */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card" onclick="window.location.href='index4-Symmetry-Day 1.html'">
+    <div class="card-content">
+      <h2>Day 1 - Exercise</h2>
+      <p>Start your exercise plan with Day 1.</p>
+    </div>
+    <button>Go to Day 1</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Symmetry-Day 2.html'">
+    <div class="card-content">
+      <h2>Day 2 - Exercise</h2>
+      <p>Continue your progress with Day 2.</p>
+    </div>
+    <button>Go to Day 2</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Symmetry-Day 3.html'">
+    <div class="card-content">
+      <h2>Day 3 - Exercise</h2>
+      <p>Build strength with today's exercises.</p>
+    </div>
+    <button>Go to Day 3</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Symmetry-Day 4.html'">
+    <div class="card-content">
+      <h2>Day 4 - Exercise</h2>
+      <p>You're halfway there! Keep it up!</p>
+    </div>
+    <button>Go to Day 4</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Symmetry-Day 5.html'">
+    <div class="card-content">
+      <h2>Day 5 - Exercise</h2>
+      <p>Push your limits with Day 5's workout.</p>
+    </div>
+    <button>Go to Day 5</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Symmetry-Day 6.html'">
+    <div class="card-content">
+      <h2>Day 6 - Exercise</h2>
+      <p>Almost there! Finish strong.</p>
+    </div>
+    <button>Go to Day 6</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Symmetry-Day 7.html'">
+    <div class="card-content">
+      <h2>Day 7 - Exercise</h2>
+      <p>Final day! Congratulations on completing.</p>
+    </div>
+    <button>Go to Day 7</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index5.html'">
+    <div class="card-content">
+      <h2>End of Exercises - Video</h2>
+      <p>Watch the final video to complete the plan.</p>
+    </div>
+    <button>Watch Video</button>
+  </div>
+</div>
+
+</body>
+</html>

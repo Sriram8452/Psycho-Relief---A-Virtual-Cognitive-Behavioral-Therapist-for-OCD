@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Psycho Relief - A Virtual Cognitive Behavioral Therapist for OCD</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes full viewport height */
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+  .slot {
+    display: flex;
+    justify-content: center; /* Centering content */
+    align-items: center;
+    position: relative;
+    flex: 1; /* Distribute space equally among all button elements */
+    border-bottom: 1px solid #ccc; /* Adds a subtle separation line */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+    cursor: pointer; /* Make the entire slot clickable */
+    color: white; /* White text color for contrast */
+    font-size: 30px;
+  }
+  /* Individual background colors for each slot */
+  #slot1 {
+    background-color: #ff6666; /* Red for Cognitive Behavourial Therapy */
+  }
+  #slot2 {
+    background-color: #66b3ff; /* Light Blue for Path to CBT */
+  }
+  #slot3 {
+    background-color: #99ff99; /* Light Green for Week 1 */
+  }
+  #slot4 {
+    background-color: #ffcc66; /* Orange for Week 2 */
+  }
+  #slot5 {
+    background-color: #ff99cc; /* Pink for Week 3 */
+  }
+  #slot6 {
+    background-color: #9966ff; /* Purple for Week 4 */
+  }
+  /* Hover effect */
+  .slot:hover {
+    background-color: #e2e2e2; /* Slightly darker on hover */
+    color: black; /* Change text color on hover */
+  }
+  .slot .content {
+    text-align: center;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="slot" id="slot1" onclick="markCompleted('slot1', 'index3.html')">
+    <div class="content">Cognitive Behavioral Therapy-Video</div>
+  </div>
+  <div class="slot" id="slot2" onclick="markCompleted('slot2', 'index3.html')">
+    <div class="content">Path to CBT-Video</div>
+  </div>
+  <div class="slot" id="slot3" onclick="markCompleted('slot3', 'index2.html')">
+    <div class="content">Week 1</div>
+  </div>
+  <div class="slot" id="slot4" onclick="markCompleted('slot4', 'index2.html')">
+    <div class="content">Week 2</div>
+  </div>
+  <div class="slot" id="slot5" onclick="markCompleted('slot5', 'index2.html')">
+    <div class="content">Week 3</div>
+  </div>
+  <div class="slot" id="slot6" onclick="markCompleted('slot6', 'index2.html')">
+    <div class="content">Week 4</div>
+  </div>
+</div>
+
+<script>
+  function markCompleted(slotId, url) {
+    // Navigate to the corresponding URL
+    window.location.href = url;
+  }
+
+  // Initialize tick marks when the page loads (no need for tick marks anymore)
+  window.onload = function() {
+    console.log('Page loaded. Ready for navigation.');
+  };
+</script>
+</body>
+</html>

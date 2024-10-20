@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Exercise Plan</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes full viewport height */
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  .card-content {
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    flex-grow: 1;
+  }
+  .card-content h2 {
+    font-size: 28px;
+    margin: 0;
+  }
+  .card-content p {
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+  }
+  button {
+    width: 100%;
+    height: 60px;
+    border: none; /* Remove default border */
+    outline: none; /* Removes focus border */
+    font-size: 24px;
+    color: #fff; /* White text color for contrast */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    border-radius: 0 0 10px 10px; /* Rounded corners for bottom of card */
+  }
+  /* Individual background colors for each button */
+  .card:nth-child(1) button {
+    background-color: #ff6666; /* Red for Day 15 */
+  }
+  .card:nth-child(2) button {
+    background-color: #66b3ff; /* Light Blue for Day 16 */
+  }
+  .card:nth-child(3) button {
+    background-color: #99ff99; /* Light Green for Day 17 */
+  }
+  .card:nth-child(4) button {
+    background-color: #ffcc66; /* Orange for Day 18 */
+  }
+  .card:nth-child(5) button {
+    background-color: #ff99cc; /* Pink for Day 19 */
+  }
+  .card:nth-child(6) button {
+    background-color: #9966ff; /* Purple for Day 20 */
+  }
+  .card:nth-child(7) button {
+    background-color: #00cccc; /* Teal for Day 21 */
+  }
+  .card:nth-child(8) button {
+    background-color: #3333cc; /* Dark Blue for Video Content */
+  }
+  /* Hover effect */
+  button:hover {
+    background-color: #e2e2e2; /* Change background to light grey on hover */
+    color: #333; /* Change text color on hover */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card" onclick="window.location.href='index4-Hoarding-Day 15.html'">
+    <div class="card-content">
+      <h2>Day 15 - Exercise</h2>
+      <p>Start the final week strong with Day 15's routine.</p>
+    </div>
+    <button>Go to Day 15</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Hoarding-Day 16.html'">
+    <div class="card-content">
+      <h2>Day 16 - Exercise</h2>
+      <p>Build momentum with Day 16 exercises.</p>
+    </div>
+    <button>Go to Day 16</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Hoarding-Day 17.html'">
+    <div class="card-content">
+      <h2>Day 17 - Exercise</h2>
+      <p>Focus on endurance with Day 17's workout.</p>
+    </div>
+    <button>Go to Day 17</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Hoarding-Day 18.html'">
+    <div class="card-content">
+      <h2>Day 18 - Exercise</h2>
+      <p>Consistency is key with Day 18 exercises.</p>
+    </div>
+    <button>Go to Day 18</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Hoarding-Day 19.html'">
+    <div class="card-content">
+      <h2>Day 19 - Exercise</h2>
+      <p>Challenge yourself with Day 19's routine.</p>
+    </div>
+    <button>Go to Day 19</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Hoarding-Day 20.html'">
+    <div class="card-content">
+      <h2>Day 20 - Exercise</h2>
+      <p>Almost there! Stay focused for Day 20.</p>
+    </div>
+    <button>Go to Day 20</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index4-Hoarding-Day 21.html'">
+    <div class="card-content">
+      <h2>Day 21 - Exercise</h2>
+      <p>Final day! Celebrate completing your exercise plan.</p>
+    </div>
+    <button>Go to Day 21</button>
+  </div>
+  
+  <div class="card" onclick="window.location.href='index5.html'">
+    <div class="card-content">
+      <h2>End of Exercises - Video</h2>
+      <p>Watch the final video to conclude your journey.</p>
+    </div>
+    <button>Watch Video</button>
+  </div>
+</div>
+
+</body>
+</html>

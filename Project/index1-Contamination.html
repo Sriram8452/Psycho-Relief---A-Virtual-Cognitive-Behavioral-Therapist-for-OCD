@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Psycho Relief - A Virtual Cognitive Behavioral Therapist for OCD</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden; /* Prevent scrollbar */
+  }
+
+  /* Large image section taking 30% of the page */
+  .large-image-section {
+    width: 100%;
+    height: 30vh; /* Adjusted to 30% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .large-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fully fills the container */
+  }
+
+  /* Container for buttons */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure buttons take full width */
+    align-items: center;
+    height: 70vh; /* Remaining 70% of the page */
+    padding: 0 10px;
+  }
+
+  /* Slot styling for buttons */
+  .slot {
+    width: calc(33.33% - 20px); /* Three buttons in a row */
+    height: calc(50% - 20px); /* Two rows */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .slot .image-section {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slot .text-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f0f0f0;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  /* Hover effect */
+  .slot:hover {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+
+<!-- Large image section -->
+<div class="large-image-section">
+  <img src="../CBT.png" alt="Large CBT Image">
+</div>
+
+<!-- Button container -->
+<div class="container">
+  <div class="slot" id="slot1" onclick="markCompleted('slot1', 'index5-Contamination.html')">
+    <div class="image-section">
+      <img src="../Flower.jpg" alt="CBT Video Icon">
+    </div>
+    <div class="text-section">
+      CBT Video
+    </div>
+  </div>
+  <div class="slot" id="slot2" onclick="markCompleted('slot2', 'index3.html')">
+    <div class="image-section">
+      <img src="../Flower.jpg" alt="Path to CBT Icon">
+    </div>
+    <div class="text-section">
+      Path to CBT
+    </div>
+  </div>
+  <div class="slot" id="slot3" onclick="markCompleted('slot3', 'index2-Week 1-Contamination.html')">
+    <div class="image-section">
+      <img src="../Flower.jpg" alt="Week 1 Icon">
+    </div>
+    <div class="text-section">
+      Week 1
+    </div>
+  </div>
+  <div class="slot" id="slot4" onclick="markCompleted('slot4', 'index2-Week 2-Contamination.html')">
+    <div class="image-section">
+      <img src="../Flower.jpg" alt="Week 2 Icon">
+    </div>
+    <div class="text-section">
+      Week 2
+    </div>
+  </div>
+  <div class="slot" id="slot5" onclick="markCompleted('slot5', 'index2-Week 3-Contamination.html')">
+    <div class="image-section">
+      <img src="../Flower.jpg" alt="Week 3 Icon">
+    </div>
+    <div class="text-section">
+      Week 3
+    </div>
+  </div>
+  <div class="slot" id="slot6" onclick="markCompleted('slot6', 'index2-Week 4-Contamination.html')">
+    <div class="image-section">
+      <img src="../Flower.jpg" alt="Week 4 Icon">
+    </div>
+    <div class="text-section">
+      Week 4
+    </div>
+  </div>
+</div>
+
+<script>
+  function markCompleted(slotId, url) {
+    window.location.href = url;
+  }
+</script>
+</body>
+</html>
