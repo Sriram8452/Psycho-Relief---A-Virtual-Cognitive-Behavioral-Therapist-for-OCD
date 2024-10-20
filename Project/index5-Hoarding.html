@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Video Player Interface</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light grey background */
+    font-family: Arial, sans-serif;
+  }
+  .video-container {
+    width: 80%; /* Adjust based on preference */
+    max-width: 800px; /* Maximum width */
+    position: relative; /* For positioning inner elements absolutely */
+  }
+  video {
+    width: 100%; /* Responsive video width */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  }
+  .completed-button {
+    position: absolute;
+    bottom: -50px; /* Position below the video */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Button shadow */
+    display: flex;
+    align-items: center;
+  }
+  .tick-icon {
+    display: none; /* Hidden by default */
+    margin-left: 10px;
+    color: green;
+  }
+</style>
+</head>
+<body>
+<div class="video-container">
+  <video controls>
+    <!-- Update src attribute to your local video path -->
+    <source src="../Hoarding.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <button class="completed-button" onclick="toggleCompletion('video1')">
+    Mark as Completed
+    <span class="tick-icon" id="tickIcon">&#10003;</span> <!-- Unicode check mark -->
+  </button>
+</div>
+
+<script>
+// Toggle tick icon and persist state
+function toggleCompletion(contentId) {
+  var tickIcon = document.getElementById('tickIcon');
+  var isCompleted = localStorage.getItem(contentId) === 'true';
+
+  if (!isCompleted) {
+    tickIcon.style.display = 'inline'; // Show the tick icon
+    localStorage.setItem(contentId, 'true'); // Save completed state
+  } else {
+    tickIcon.style.display = 'none'; // Hide the tick icon
+    localStorage.setItem(contentId, 'false'); // Remove completed state
+  }
+}
+
+// Initialize tick icon based on localStorage state
+function initializeButtonState() {
+  var isCompleted = localStorage.getItem('video1') === 'true';
+  var tickIcon = document.getElementById('tickIcon');
+
+  if (isCompleted) {
+    tickIcon.style.display = 'inline'; // Show tick if previously completed
+  }
+}
+
+// Call initializeButtonState when the page loads
+window.onload = initializeButtonState;
+</script>
+</body>
+</html>

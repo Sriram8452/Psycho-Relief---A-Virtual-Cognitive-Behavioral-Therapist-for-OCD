@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment Page</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff; /* Light blue background */
+  }
+  .assignment-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #007BFF; /* Add blue border to the left */
+  }
+  h1 {
+    color: #0056b3; /* Darker shade of blue for the heading */
+  }
+  p {
+    color: #333; /* Dark grey for text */
+  }
+  .completed-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF; /* Unified blue color for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .completed-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  .tick-icon {
+    margin-left: 10px;
+    font-size: 24px;
+    color: green;
+  }
+</style>
+</head>
+<body>
+
+<div class="assignment-container">
+  <h1>Assignment: Delay Acquisition</h1>
+  <p>When you feel the urge to acquire new items, postpone the decision for a set amount of time, gradually increasing the delay.</p>
+  <button class="completed-button" onclick="toggleCompleted(this)">
+    Mark as Completed
+    <span class="tick-icon">&#10003;</span> <!-- Unicode check mark -->
+  </button>
+</div>
+
+<script>
+// Function to check and update the completed state on page load
+function initializeState() {
+  var button = document.querySelector('.completed-button');
+  var tickIcon = button.querySelector('.tick-icon');
+  
+  // Check localStorage for the completed state
+  var isCompleted = localStorage.getItem('assignmentCompleted') === 'true';
+
+  if (isCompleted) {
+    tickIcon.style.display = 'inline'; // Show the tick if completed
+    button.innerHTML = 'Mark as Not Completed' + tickIcon.outerHTML;
+  } else {
+    tickIcon.style.display = 'none'; // Hide the tick if not completed
+    button.innerHTML = 'Mark as Completed' + tickIcon.outerHTML;
+  }
+}
+
+// Toggle the completed state and store it in localStorage
+function toggleCompleted(button) {
+  var tickIcon = button.querySelector('.tick-icon');
+  var isCompleted = localStorage.getItem('assignmentCompleted') === 'true';
+
+  if (isCompleted) {
+    // Unmark as completed
+    tickIcon.style.display = 'none';
+    localStorage.setItem('assignmentCompleted', 'false');
+    button.innerHTML = 'Mark as Completed' + tickIcon.outerHTML;
+  } else {
+    // Mark as completed
+    tickIcon.style.display = 'inline';
+    localStorage.setItem('assignmentCompleted', 'true');
+    button.innerHTML = 'Mark as Completed' + tickIcon.outerHTML;
+  }
+}
+
+// Initialize the button state on page load
+window.onload = initializeState;
+</script>
+</body>
+</html>
