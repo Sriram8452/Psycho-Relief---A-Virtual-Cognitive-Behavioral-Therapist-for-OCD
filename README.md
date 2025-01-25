@@ -1,4 +1,4 @@
-# Psycho-Relief---A-Virtual-Cognitive-Behavioral-Therapist-for-OCD
+# Psycho-Relief-A-Virtual-Cognitive-Behavioral-Therapist-for-OCD
 
 ## Title of the Project
 
